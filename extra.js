@@ -12,20 +12,6 @@
   };
   var wa = function (t) { return "https://wa.me/" + (S.wa || "") + "?text=" + encodeURIComponent(t); };
 
-  /* ---------- Parallax de la banda ---------- */
-  var band = $(".xb"), bimg = band && $(".xb-im img", band);
-  if (bimg && !reduce) {
-    var tick = false;
-    var move = function () {
-      tick = false;
-      var r = band.getBoundingClientRect(), vh = window.innerHeight;
-      if (r.bottom < 0 || r.top > vh) return;
-      bimg.style.transform = "translate3d(0," + (((r.top + r.height / 2 - vh / 2) / (vh + r.height)) * -16).toFixed(2) + "%,0)";
-    };
-    window.addEventListener("scroll", function () { if (!tick) { tick = true; requestAnimationFrame(move); } }, { passive: true });
-    move();
-  }
-
   /* ---------- Simulador de blanqueamiento ---------- */
   var wh = $("#wh");
   if (wh) {
