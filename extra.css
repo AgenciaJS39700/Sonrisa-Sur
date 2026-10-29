@@ -70,3 +70,4 @@
 .tm-c span{color:var(--brand);font-weight:700;font-size:.88rem}
 .tm-c p{color:var(--mute);font-size:.9rem;margin-top:.3rem}
 @media(prefers-reduced-motion:reduce){.xb-im img{transform:none!important}.sp img{transition:none}}
+@media(max-width:859px){.sp{min-height:0;background:var(--deep);justify-content:flex-start}.sp img{position:relative;inset:auto;height:auto;aspect-ratio:4/3;z-index:0}.sp::before{display:none}}
